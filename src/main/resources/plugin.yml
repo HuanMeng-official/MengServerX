@@ -1,0 +1,4 @@
+name: MengServerX
+version: '${project.version}'
+main: me.huanmeng.MengServerX
+api-version: '1.13'
