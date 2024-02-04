@@ -1,14 +1,20 @@
 # This is the MengServerX configuration file
+# 这是MengServerX的配置文件
 
-# Modify the format of messages sent by players | 修改玩家发送的消息格式
+# Modify the format of messages sent by players
+# 修改玩家发送的消息格式
 ChatFormat: true
-# Specifies whether to enable the whitelist | 是否开启白名单
+# Specifies whether to enable the whitelist
+# 是否开启白名单
 WhiteList: true
 
-#Prevent unwhitelisted players from logging in prompts | 阻止无白名单玩家登录提示词
+# Prevent unwhitelisted players from logging in prompts
+# 阻止无白名单玩家登录提示词
 NotAllow: "&c您并没有白名单，请联系服务器管理员"
-#A notification sent when the player whitelist is revoked by an administrator | 玩家白名单被管理员撤销时发送的提示
+# A notification sent when the player whitelist is revoked by an administrator
+# 玩家白名单被管理员撤销时发送的提示
 Repeal: "&c您因违反服务器规则被撤销了白名单"
 
-# A list of player whitelists | 玩家白名单列表
-List:
+# A list of player whitelists
+# 玩家白名单列表
+List: []

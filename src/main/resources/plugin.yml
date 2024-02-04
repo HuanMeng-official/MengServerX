@@ -8,3 +8,5 @@ commands:
     description: add the whitelist
   msx_remove:
     description: remove the whitelist
+  msx_seed:
+    description: get world seed

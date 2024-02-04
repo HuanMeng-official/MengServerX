@@ -8,6 +8,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 import java.util.Objects;
@@ -16,19 +17,16 @@ import static me.huanmeng.util.Abbreviations.M;
 
 public class WhiteListRemove implements CommandExecutor {
     @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if(!sender.isOp()){
             sender.sendMessage(ChatColor.YELLOW + M + ChatColor.RED + "该命令只能由管理员执行");
             return false;
         }
-
         if(args.length != 1){
-            sender.sendMessage(ChatColor.YELLOW + M + ChatColor.RED + "Used: /mwl_remove <player>");
+            sender.sendMessage(ChatColor.YELLOW + M + ChatColor.RED + "Used: /msx_remove <player>");
             return false;
         }
-
         Plugin config = MengServerX.getPlugin(MengServerX.class);
-
         List<String> whitelist = config.getConfig().getStringList("List");
         if(whitelist.contains(args[0])){
             Player remove = Bukkit.getPlayer(args[0]);
@@ -36,11 +34,9 @@ public class WhiteListRemove implements CommandExecutor {
             config.getConfig().set("List", whitelist);
             config.saveConfig();
             sender.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + "已取消玩家白名单");
-
             if(remove == null){
                 return false;
             }
-
             if(remove.isOnline()){
                 sender.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + "已取消玩家白名单");
                 remove.kickPlayer(ChatColor.translateAlternateColorCodes('&',
