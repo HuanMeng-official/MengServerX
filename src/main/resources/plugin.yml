@@ -2,3 +2,9 @@ name: MengServerX
 version: '${project.version}'
 main: me.huanmeng.MengServerX
 api-version: '1.13'
+
+commands:
+  msx_add:
+    description: add the whitelist
+  msx_remove:
+    description: remove the whitelist
