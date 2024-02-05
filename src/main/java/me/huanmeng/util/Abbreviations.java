@@ -7,6 +7,6 @@ public class Abbreviations {
     static {
         N = "[MengServerX] ";
         V = Bukkit.getBukkitVersion();
-        M = "[幻梦娘]";
+        M = "[幻梦娘] ";
     }
 }

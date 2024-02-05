@@ -10,3 +10,5 @@ commands:
     description: remove the whitelist
   msx_seed:
     description: get world seed
+  msx_gm:
+    description: set op's game mode
