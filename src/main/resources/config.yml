@@ -7,6 +7,9 @@ ChatFormat: true
 # Specifies whether to enable the whitelist
 # 是否开启白名单
 WhiteList: true
+# This feature is KeepInventory for Minecraft
+# 是否开启保留物品栏
+KeepInventory: true
 
 # Prevent unwhitelisted players from logging in prompts
 # 阻止无白名单玩家登录提示词
