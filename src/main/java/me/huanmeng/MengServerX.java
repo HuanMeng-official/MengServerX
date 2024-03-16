@@ -15,7 +15,7 @@ import static me.huanmeng.util.TextColor.*;
 public final class MengServerX extends JavaPlugin {
 
     public void onLoad() {
-        log.info(N + GREEN + "Plugin is running on spigot " + YELLOW + V);
+        log.info(N + GREEN + "Plugin is running on spigot " + YELLOW + V + RESET);
     }
 
     @Override
