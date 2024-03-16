@@ -4,11 +4,13 @@ main: me.huanmeng.MengServerX
 api-version: '1.13'
 
 commands:
-  msx_add:
+  msx_wl_add:
     description: add the whitelist
-  msx_remove:
+  msx_wl_remove:
     description: remove the whitelist
   msx_seed:
     description: get world seed
   msx_gm:
     description: set op's game mode
+  msx_sn:
+    description: send notice

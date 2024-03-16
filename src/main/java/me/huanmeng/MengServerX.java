@@ -1,9 +1,6 @@
 package me.huanmeng;
 
-import me.huanmeng.command.GetSeed;
-import me.huanmeng.command.SetGameMode;
-import me.huanmeng.command.WhiteListAdd;
-import me.huanmeng.command.WhiteListRemove;
+import me.huanmeng.command.*;
 import me.huanmeng.event.JoinGame;
 import me.huanmeng.player.ChatFormat;
 import me.huanmeng.world.KeepInventory;
@@ -29,10 +26,11 @@ public final class MengServerX extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new ChatFormat(), this);
         getServer().getPluginManager().registerEvents(new JoinGame(), this);
         getServer().getPluginManager().registerEvents(new KeepInventory(), this);
-        Objects.requireNonNull(getCommand("msx_add")).setExecutor(new WhiteListAdd());
-        Objects.requireNonNull(getCommand("msx_remove")).setExecutor(new WhiteListRemove());
-        Objects.requireNonNull(getCommand("msx_seed")).setExecutor(new GetSeed());
+        Objects.requireNonNull(getCommand("msx_wl_add")).setExecutor(new WhiteListAdd());
+        Objects.requireNonNull(getCommand("msx_wl_remove")).setExecutor(new WhiteListRemove());
+        Objects.requireNonNull(getCommand("msx_seed")).setExecutor(new GetWorldSeed());
         Objects.requireNonNull(getCommand("msx_gm")).setExecutor(new SetGameMode());
+        Objects.requireNonNull(getCommand("msx_sn")).setExecutor(new SendNotice());
     }
 
     @Override
