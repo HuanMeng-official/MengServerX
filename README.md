@@ -5,8 +5,14 @@
 ### 什么是MengServerX？
 MengServerX是 [MengPluginX](https://github.com/HuanMeng-official/MengPluginX) 的续作，相较于MPX，MSX拥有更好的性能，更简洁的代码。
 
-### 为什么要出MengServerX？
-原因很简单，MengPluginX堪比屎山的代码属实是让我维护不下去，于是我准备全部推翻重写。
+### 相比MengPluginX的修改？
+更简洁的代码，去除大量无用功能，更易懂的配置文件。
 
-### MengServerX会保持更新吗？
-说句现实的，不会，因为我没那个精力，但是我会尽己所能努力维护。
+### 如何使用MSX？
+在 [Release](https://github.com/HuanMeng-official/MengServerX/releases) 页下载 ***jar*** 并拖入服务器的 plugins 文件夹。
+
+### 如何提交建议？
+在 [Issue](https://github.com/HuanMeng-official/MengServerX/issues) 页下发送。
+
+### 如何构建MSX？
+下载源码，使用 ***Maven*** 构建。
