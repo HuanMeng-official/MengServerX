@@ -10,6 +10,9 @@ WhiteList: true
 # This feature is KeepInventory for Minecraft
 # 是否开启保留物品栏
 KeepInventory: true
+# Whether to stop Creeper from exploding and destroying terrain
+# 是否阻止苦力怕爆炸摧毁地形
+AntiCreeperBoom: false
 
 # Prevent unwhitelisted players from logging in prompts
 # 阻止无白名单玩家登录提示词

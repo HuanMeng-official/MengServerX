@@ -3,6 +3,7 @@ package me.huanmeng;
 import me.huanmeng.command.*;
 import me.huanmeng.event.JoinGame;
 import me.huanmeng.player.ChatFormat;
+import me.huanmeng.world.AntiCreeperBoom;
 import me.huanmeng.world.KeepInventory;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -26,6 +27,7 @@ public final class MengServerX extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new ChatFormat(), this);
         getServer().getPluginManager().registerEvents(new JoinGame(), this);
         getServer().getPluginManager().registerEvents(new KeepInventory(), this);
+        getServer().getPluginManager().registerEvents(new AntiCreeperBoom(), this);
         Objects.requireNonNull(getCommand("msx_wl_add")).setExecutor(new WhiteListAdd());
         Objects.requireNonNull(getCommand("msx_wl_remove")).setExecutor(new WhiteListRemove());
         Objects.requireNonNull(getCommand("msx_seed")).setExecutor(new GetWorldSeed());
