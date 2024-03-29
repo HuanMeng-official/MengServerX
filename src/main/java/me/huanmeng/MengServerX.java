@@ -28,6 +28,7 @@ public final class MengServerX extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new JoinGame(), this);
         getServer().getPluginManager().registerEvents(new KeepInventory(), this);
         getServer().getPluginManager().registerEvents(new AntiCreeperBoom(), this);
+        Objects.requireNonNull(getCommand("msx_help")).setExecutor(new CommandHelp());
         Objects.requireNonNull(getCommand("msx_wl_add")).setExecutor(new WhiteListAdd());
         Objects.requireNonNull(getCommand("msx_wl_remove")).setExecutor(new WhiteListRemove());
         Objects.requireNonNull(getCommand("msx_seed")).setExecutor(new GetWorldSeed());

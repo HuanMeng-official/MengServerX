@@ -4,6 +4,8 @@ main: me.huanmeng.MengServerX
 api-version: '1.13'
 
 commands:
+  msx_help:
+    description: send commands help
   msx_wl_add:
     description: add the whitelist
   msx_wl_remove:
