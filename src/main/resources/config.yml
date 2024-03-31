@@ -4,6 +4,9 @@
 # Modify the format of messages sent by players
 # 修改玩家发送的消息格式
 ChatFormat: true
+# Whether to enable server welcome
+# 是否开启服务器欢迎
+JoinTip: true
 # Specifies whether to enable the whitelist
 # 是否开启白名单
 WhiteList: true
