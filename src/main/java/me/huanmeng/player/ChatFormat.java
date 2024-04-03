@@ -8,6 +8,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.plugin.Plugin;
 
+import static me.huanmeng.util.DateUtil.TIME;
+
 public class ChatFormat implements Listener {
     Plugin config = MengServerX.getPlugin(MengServerX.class);
     @EventHandler
@@ -15,10 +17,11 @@ public class ChatFormat implements Listener {
         Player player = e.getPlayer();
         if (config.getConfig().getBoolean("ChatFormat")) {
             e.setFormat(
-                    ChatColor.GRAY + "[" +
-                            ChatColor.DARK_PURPLE + "Level: " +
-                            ChatColor.GOLD +
-                            player.getWorld().getName() +
+                            ChatColor.GRAY + "[" +
+                            ChatColor.DARK_PURPLE + TIME +
+                            ChatColor.GRAY + "]" +
+                            ChatColor.GRAY + "[" +
+                            ChatColor.GOLD + player.getWorld().getName() +
                             ChatColor.GRAY + "]" +
                             ChatColor.AQUA + player.getName() +
                             ChatColor.WHITE + ": " +
