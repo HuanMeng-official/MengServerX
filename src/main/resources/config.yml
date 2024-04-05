@@ -7,6 +7,9 @@ ChatFormat: true
 # Whether to enable server welcome
 # 是否开启服务器欢迎
 JoinTip: true
+# Whether to enable player exit reminders
+# 是否开启玩家退出提醒
+QuitTip: true
 # Specifies whether to enable the whitelist
 # 是否开启白名单
 WhiteList: true
