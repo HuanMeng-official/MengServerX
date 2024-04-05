@@ -22,13 +22,13 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
       
-    - name: Create Zip
-      run: |
-          cd target
-          zip -r msx.zip MengServerX-1.0-SNAPSHOT.jar
+#    - name: Create Zip
+#      run: |
+#          cd target
+#          zip -r msx.zip MengServerX-1.0-SNAPSHOT.jar
 
     - name: Upload Zip
       uses: actions/upload-artifact@v2
       with:
         name: plugin
-        path: target/msx.zip
+        path: target/MengServerX-1.0-SNAPSHOT.jar
