@@ -32,6 +32,6 @@ jobs:
 
     - name: Upload Zip
       uses: actions/upload-artifact@v2
-        with:
-          name: plugin
-          path: target/msx.zip
+      with:
+        name: plugin
+        path: target/msx.zip
