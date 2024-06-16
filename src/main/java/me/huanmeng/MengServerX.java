@@ -7,6 +7,7 @@ import me.huanmeng.player.JoinTips;
 import me.huanmeng.player.QuitTips;
 import me.huanmeng.world.AntiCreeperBoom;
 import me.huanmeng.world.KeepInventory;
+import me.huanmeng.world.DropCleaner;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -26,6 +27,7 @@ public final class MengServerX extends JavaPlugin {
         log.info(N + "Plugin is enable");
         getConfig().options().copyDefaults(true);
         saveDefaultConfig();
+        DropCleaner.startCleanTask();
         getServer().getPluginManager().registerEvents(new ChatFormat(), this);
         getServer().getPluginManager().registerEvents(new JoinGame(), this);
         getServer().getPluginManager().registerEvents(new JoinTips(), this);
