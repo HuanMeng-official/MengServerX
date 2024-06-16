@@ -18,7 +18,7 @@ public class DropCleaner {
             public void run() {
                 cleanDrops();
             }
-        }.runTaskTimer(plugin, 0L, 1200L);
+        }.runTaskTimer(plugin, 0L, 12000L);
     }
 
     private static void cleanDrops() {
