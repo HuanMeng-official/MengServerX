@@ -1,8 +1,8 @@
 package me.huanmeng.world;
 
 import me.huanmeng.MengServerX;
+import me.huanmeng.util.TextColor;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Item;
 import org.bukkit.plugin.Plugin;
@@ -31,6 +31,6 @@ public class DropCleaner {
                 }
             }
         }
-        Bukkit.getLogger().info(ChatColor.YELLOW + M + ChatColor.RESET + "清理了" + itemCount + "个凋落物！");
+        Bukkit.getLogger().info(TextColor.YELLOW + M + TextColor.RESET + "清理了" + itemCount + "个凋落物！");
     }
 }
