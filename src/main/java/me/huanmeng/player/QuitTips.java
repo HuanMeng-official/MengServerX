@@ -17,7 +17,7 @@ public class QuitTips implements Listener {
         if (config.getConfig().getBoolean("QuitTip")) {
             Player player = e.getPlayer();
             String name = player.getName();
-            e.setQuitMessage(ChatColor.YELLOW + M + ChatColor.RESET + name + " 退出了游戏!");
+            e.setQuitMessage(ChatColor.YELLOW + M + ChatColor.RESET + name + " 退出了游戏！");
         }
     }
 }
