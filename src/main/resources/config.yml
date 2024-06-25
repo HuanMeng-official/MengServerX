@@ -19,6 +19,9 @@ KeepInventory: false
 # Whether to stop Creeper from exploding and destroying terrain
 # 是否阻止苦力怕爆炸摧毁地形
 AntiCreeperBoom: false
+# Whether to turn on Drop Cleanup
+# 是否开启掉落物清理
+DropCleaner: true
 
 # Prevent unwhitelisted players from logging in prompts
 # 阻止无白名单玩家登录提示词

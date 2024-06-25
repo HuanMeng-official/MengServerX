@@ -13,12 +13,14 @@ public class DropCleaner {
     static Plugin plugin = MengServerX.getPlugin(MengServerX.class);
 
     public static void startCleanTask() {
-        new BukkitRunnable() {
-            @Override
-            public void run() {
-                cleanDrops();
-            }
-        }.runTaskTimer(plugin, 0L, 12000L);
+        if (plugin.getConfig().getBoolean("DropCleaner")) {
+            new BukkitRunnable() {
+                @Override
+                public void run() {
+                    cleanDrops();
+                }
+            }.runTaskTimer(plugin, 0L, 12000L);
+        }
     }
 
     private static void cleanDrops() {
