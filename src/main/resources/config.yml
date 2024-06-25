@@ -22,6 +22,9 @@ AntiCreeperBoom: false
 # Whether to turn on Drop Cleanup
 # 是否开启掉落物清理
 DropCleaner: true
+# Dropped items are cleared at regular intervals
+# 掉落物清理时常间隔
+CleanTime: 600
 
 # Prevent unwhitelisted players from logging in prompts
 # 阻止无白名单玩家登录提示词

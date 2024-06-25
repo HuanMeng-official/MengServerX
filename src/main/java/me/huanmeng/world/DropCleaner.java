@@ -11,6 +11,7 @@ import static me.huanmeng.util.Abbreviations.M;
 
 public class DropCleaner {
     static Plugin plugin = MengServerX.getPlugin(MengServerX.class);
+    static int t = plugin.getConfig().getInt("CleanTime");
 
     public static void startCleanTask() {
         if (plugin.getConfig().getBoolean("DropCleaner")) {
@@ -19,7 +20,7 @@ public class DropCleaner {
                 public void run() {
                     cleanDrops();
                 }
-            }.runTaskTimer(plugin, 0L, 12000L);
+            }.runTaskTimer(plugin, 0L, t * 20L);
         }
     }
 
