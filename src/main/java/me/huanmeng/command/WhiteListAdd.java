@@ -8,7 +8,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.Plugin;
 import org.jetbrains.annotations.NotNull;
 
-
 import java.util.List;
 
 import static me.huanmeng.util.Abbreviations.M;
