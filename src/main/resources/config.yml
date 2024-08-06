@@ -25,7 +25,12 @@ DropCleaner: true
 # Dropped items are cleared at regular intervals
 # 掉落物清理时常间隔
 CleanTime: 600
-
+# Whether to enable the scoreboard
+# 是否启用挖掘榜
+Board: true
+# Scoreboard name
+# 挖掘榜名称
+BoardName: "Board"
 # Prevent unwhitelisted players from logging in prompts
 # 阻止无白名单玩家登录提示词
 NotAllow: "&c您并没有白名单，请联系服务器管理员"

@@ -6,6 +6,7 @@ import me.huanmeng.player.ChatFormat;
 import me.huanmeng.player.JoinTips;
 import me.huanmeng.player.QuitTips;
 import me.huanmeng.world.AntiCreeperBoom;
+import me.huanmeng.world.BreakBoard;
 import me.huanmeng.world.KeepInventory;
 import me.huanmeng.world.DropCleaner;
 import org.bukkit.Bukkit;
@@ -34,6 +35,8 @@ public final class MengServerX extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new QuitTips(), this);
         getServer().getPluginManager().registerEvents(new KeepInventory(), this);
         getServer().getPluginManager().registerEvents(new AntiCreeperBoom(), this);
+        getServer().getPluginManager().registerEvents(new BreakBoard(), this);
+        BreakBoard.enableBoard();
         Objects.requireNonNull(getCommand("msx_help")).setExecutor(new CommandHelp());
         Objects.requireNonNull(getCommand("msx_wl_add")).setExecutor(new WhiteListAdd());
         Objects.requireNonNull(getCommand("msx_wl_remove")).setExecutor(new WhiteListRemove());
@@ -45,6 +48,7 @@ public final class MengServerX extends JavaPlugin {
     @Override
     public void onDisable() {
         log.info(N + "Plugin is disable");
+        BreakBoard.disableBoard();
     }
 
     private static final Logger log = Bukkit.getLogger();
