@@ -9,6 +9,7 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.Plugin;
 
 import static me.huanmeng.util.Abbreviations.M;
+import static me.huanmeng.MengServerX.getMessage;
 
 public class QuitTips implements Listener {
     Plugin config = MengServerX.getPlugin(MengServerX.class);
@@ -17,7 +18,7 @@ public class QuitTips implements Listener {
         if (config.getConfig().getBoolean("QuitTip")) {
             Player player = e.getPlayer();
             String name = player.getName();
-            e.setQuitMessage(ChatColor.YELLOW + M + ChatColor.RESET + name + " 退出了游戏！");
+            e.setQuitMessage(ChatColor.YELLOW + M + ChatColor.RESET + name + getMessage("quit-info"));
         }
     }
 }

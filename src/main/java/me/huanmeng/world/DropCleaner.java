@@ -8,6 +8,7 @@ import org.bukkit.entity.Item;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
 import static me.huanmeng.util.Abbreviations.M;
+import static me.huanmeng.MengServerX.getMessage;
 
 public class DropCleaner {
     static Plugin plugin = MengServerX.getPlugin(MengServerX.class);
@@ -34,6 +35,6 @@ public class DropCleaner {
                 }
             }
         }
-        Bukkit.getLogger().info(TextColor.YELLOW + M + TextColor.RESET + "清理了" + itemCount + "个凋落物！");
+        Bukkit.getLogger().info(TextColor.YELLOW + M + TextColor.RESET + getMessage("cleaner-info_1") + itemCount + getMessage("cleaner-info_2"));
     }
 }

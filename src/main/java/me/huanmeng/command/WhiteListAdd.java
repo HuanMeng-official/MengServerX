@@ -9,14 +9,14 @@ import org.bukkit.plugin.Plugin;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
-
 import static me.huanmeng.util.Abbreviations.M;
+import static me.huanmeng.MengServerX.getMessage;
 
 public class WhiteListAdd implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
         if(!sender.isOp()){
-            sender.sendMessage(ChatColor.YELLOW + M + ChatColor.RED + "该命令只能由管理员执行");
+            sender.sendMessage(ChatColor.YELLOW + M + ChatColor.RED + getMessage("command-info"));
             return false;
         }
         if (args.length != 1) {
@@ -27,13 +27,13 @@ public class WhiteListAdd implements CommandExecutor {
 
         List<String> whitelist = config.getConfig().getStringList("List");
         if(whitelist.contains(args[0])){
-            sender.sendMessage(ChatColor.YELLOW + M + ChatColor.RED + "该玩家已拥有白名单，切勿重复添加");
+            sender.sendMessage(ChatColor.YELLOW + M + ChatColor.RED + getMessage("had-wl"));
             return false;
         }
         whitelist.add(args[0]);
         config.getConfig().set("List", whitelist);
         config.saveConfig();
-        sender.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + "已将该玩家添加入白名单");
+        sender.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + getMessage("added-wl"));
         return false;
     }
 }

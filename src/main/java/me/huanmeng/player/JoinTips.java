@@ -9,6 +9,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.Plugin;
 
 import static me.huanmeng.util.Abbreviations.M;
+import static me.huanmeng.MengServerX.getMessage;
 
 public class JoinTips implements Listener {
     Plugin config = MengServerX.getPlugin(MengServerX.class);
@@ -17,7 +18,7 @@ public class JoinTips implements Listener {
         if (config.getConfig().getBoolean("JoinTip")) {
             Player player = event.getPlayer();
             String name = player.getName();
-            event.setJoinMessage(ChatColor.YELLOW + M + ChatColor.RESET + "欢迎 " + name + " 加入服务器！");
+            event.setJoinMessage(ChatColor.YELLOW + M + ChatColor.RESET + getMessage("join-info_1") + name + getMessage("join-info_2"));
         }
     }
 }

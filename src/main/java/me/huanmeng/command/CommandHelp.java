@@ -8,19 +8,21 @@ import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
+import static me.huanmeng.MengServerX.getMessage;
+
 public class CommandHelp implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if (sender instanceof Player) {
             Player player = (Player) sender;
-            player.sendMessage(ChatColor.GREEN + "----白名单----\n" + ChatColor.YELLOW + "/msx_wl_add <player> - 添加白名单\n" + "/msx_wl_remove <player> - 移除白名单");
-            player.sendMessage(ChatColor.GREEN + "----实用功能----\n" + ChatColor.YELLOW + "/msx_seed - 查询所在世界的种子\n" + "/msx_sn - 发送全服通告\n" + "/msx_gm <number> - 切换游戏模式");
-            player.sendMessage(ChatColor.GREEN + "----其他功能----\n" + ChatColor.YELLOW + "/msx_help - 命令帮助");
+            player.sendMessage(ChatColor.GREEN + getMessage("command-help_wl") + "\n" + ChatColor.YELLOW + getMessage("command-help_add_wl") + "\n" + getMessage("command-help_rm_wl"));
+            player.sendMessage(ChatColor.GREEN + getMessage("command-help_util") + "\n" + ChatColor.YELLOW + getMessage("command-help_seed_util") + "\n" + getMessage("command-help_sn_util") + "\n" + getMessage("command-help_gm_util"));
+            player.sendMessage(ChatColor.GREEN + getMessage("command-help_other") + "\n" + ChatColor.YELLOW + getMessage("command-help_help_other"));
         } else if (sender instanceof ConsoleCommandSender) {
             ConsoleCommandSender console = (ConsoleCommandSender) sender;
-            console.sendMessage(ChatColor.GREEN + "----白名单----\n" + ChatColor.YELLOW + "/msx_wl_add <player> - 添加白名单\n" + "/msx_wl_remove <player> - 移除白名单");
-            console.sendMessage(ChatColor.GREEN + "----实用功能----\n" + ChatColor.YELLOW + "/msx_seed - 查询所在世界的种子\n" + "/msx_sn - 发送全服通告\n" + "/msx_gm <number> - 切换游戏模式");
-            console.sendMessage(ChatColor.GREEN + "----其他功能----\n" + ChatColor.YELLOW + "/msx_help - 命令帮助");
+            console.sendMessage(ChatColor.GREEN + getMessage("command-help_wl") + "\n" + ChatColor.YELLOW + getMessage("command-help_add_wl") + "\n" + getMessage("command-help_rm_wl"));
+            console.sendMessage(ChatColor.GREEN + getMessage("command-help_util") + "\n" + ChatColor.YELLOW + getMessage("command-help_seed_util") + "\n" + getMessage("command-help_sn_util") + "\n" + getMessage("command-help_gm_util"));
+            console.sendMessage(ChatColor.GREEN + getMessage("command-help_other") + "\n" + ChatColor.YELLOW + getMessage("command-help_help_other"));
         }
         return false;
     }

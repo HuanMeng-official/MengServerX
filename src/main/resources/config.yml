@@ -1,6 +1,9 @@
 # This is the MengServerX configuration file
 # 这是MengServerX的配置文件
 
+# Plugin's language (zh and en)
+# 插件语言（简体中文'zh'和英文'en'）
+Language: 'en'
 # Modify the format of messages sent by players
 # 修改玩家发送的消息格式
 ChatFormat: true

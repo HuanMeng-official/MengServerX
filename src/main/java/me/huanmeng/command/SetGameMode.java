@@ -13,6 +13,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 import static me.huanmeng.util.Abbreviations.M;
+import static me.huanmeng.MengServerX.getMessage;
 
 public class SetGameMode implements CommandExecutor, TabExecutor {
     @Override
@@ -23,23 +24,23 @@ public class SetGameMode implements CommandExecutor, TabExecutor {
             switch (mode) {
                 case "1":
                     player.setGameMode(GameMode.CREATIVE);
-                    player.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + "已将您的游戏模式更换为创造");
+                    player.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + getMessage("gm-info_cre"));
                     break;
                 case "2":
                     player.setGameMode(GameMode.ADVENTURE);
-                    player.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + "已将您的游戏模式更换为冒险");
+                    player.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + getMessage("gm-info_adv"));
                     break;
                 case "3":
                     player.setGameMode(GameMode.SPECTATOR);
-                    player.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + "已将您的游戏模式更换为旁观");
+                    player.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + getMessage("gm-info_spe"));
                     break;
                 case "0":
                     player.setGameMode(GameMode.SURVIVAL);
-                    player.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + "已将您的游戏模式更换为生存");
+                    player.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + getMessage("gm-info_sur"));
                     break;
             }
         }else {
-            player.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + "该命令只能由管理员执行");
+            player.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + getMessage("command-info"));
         }
         return false;
     }

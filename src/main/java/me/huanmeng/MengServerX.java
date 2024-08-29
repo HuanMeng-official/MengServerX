@@ -10,14 +10,18 @@ import me.huanmeng.world.BreakBoard;
 import me.huanmeng.world.KeepInventory;
 import me.huanmeng.world.DropCleaner;
 import org.bukkit.Bukkit;
+import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.io.File;
 import java.util.Objects;
 import java.util.logging.Logger;
 import static me.huanmeng.util.Abbreviations.*;
 import static me.huanmeng.util.TextColor.*;
 
 public final class MengServerX extends JavaPlugin {
+    private static FileConfiguration messages;
 
     public void onLoad() {
         log.info(N + GREEN + "Plugin is running on spigot " + YELLOW + V + RESET);
@@ -25,7 +29,9 @@ public final class MengServerX extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        loadMessages();
         log.info(N + "Plugin is enable");
+        log.info(GREEN + getMessage("lang-info") + RESET);
         getConfig().options().copyDefaults(true);
         saveDefaultConfig();
         DropCleaner.startCleanTask();
@@ -52,4 +58,19 @@ public final class MengServerX extends JavaPlugin {
     }
 
     private static final Logger log = Bukkit.getLogger();
+
+    private void loadMessages() {
+        String language = getConfig().getString("Language", "en");
+        File messagesFile = new File(getDataFolder(), "lang_" + language + ".yml");
+
+        if (!messagesFile.exists()) {
+            saveResource("lang_" + language + ".yml", false);
+        }
+
+        messages = YamlConfiguration.loadConfiguration(messagesFile);
+    }
+
+    public static String getMessage(String key) {
+        return messages.getString(key, "Language file not found: " + key);
+    }
 }

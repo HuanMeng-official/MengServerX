@@ -9,6 +9,7 @@ import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
 import static me.huanmeng.util.Abbreviations.M;
+import static me.huanmeng.MengServerX.getMessage;
 
 public class GetWorldSeed implements CommandExecutor {
     @Override
@@ -17,7 +18,7 @@ public class GetWorldSeed implements CommandExecutor {
             Player player = (Player) sender;
             World world = player.getWorld();
             long seed = world.getSeed();
-            player.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + "Seed: " + ChatColor.GREEN + seed);
+            player.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + getMessage("seed-info") + ChatColor.GREEN + seed);
         }
         return false;
     }
