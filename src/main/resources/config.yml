@@ -30,10 +30,10 @@ DropCleaner: true
 CleanTime: 600
 # Whether to enable the scoreboard
 # 是否启用挖掘榜
-Board: true
+BreakBoard: true
 # Scoreboard name
 # 挖掘榜名称
-BoardName: "Board"
+BreakBoardName: "Board"
 # Prevent unwhitelisted players from logging in prompts
 # 阻止无白名单玩家登录提示词
 NotAllow: "&c您并没有白名单，请联系服务器管理员"

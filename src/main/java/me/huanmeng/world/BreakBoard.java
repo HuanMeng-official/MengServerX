@@ -31,13 +31,13 @@ public class BreakBoard implements Listener {
         if (config.getConfig().getBoolean("Board")) {
             manager = Bukkit.getScoreboardManager();
             board = manager.getNewScoreboard();
-            objective = board.registerNewObjective("blockCount", "dummy", Objects.requireNonNull(config.getConfig().getString("BoardName")));
+            objective = board.registerNewObjective("blockCount", "dummy", Objects.requireNonNull(config.getConfig().getString("BreakBoardName")));
             objective.setDisplaySlot(DisplaySlot.SIDEBAR);
-            dataFile = new File(JavaPlugin.getPlugin(MengServerX.class).getDataFolder(), "data.yml");
+            dataFile = new File(JavaPlugin.getPlugin(MengServerX.class).getDataFolder(), "data_break.yml");
 
             if (!dataFile.exists()) {
                 dataFile.getParentFile().mkdirs();
-                config.saveResource("data.yml", false);
+                config.saveResource("data_break.yml", false);
             }
 
             dataConfig = YamlConfiguration.loadConfiguration(dataFile);
@@ -46,7 +46,7 @@ public class BreakBoard implements Listener {
     }
 
     public static void disableBoard() {
-        if (config.getConfig().getBoolean("Board")) {
+        if (config.getConfig().getBoolean("BreakBoard")) {
             saveBlockCounts();
         }
     }
