@@ -49,7 +49,6 @@ public final class MengServerX extends JavaPlugin {
         Objects.requireNonNull(getCommand("msx_seed")).setExecutor(new GetWorldSeed());
         Objects.requireNonNull(getCommand("msx_gm")).setExecutor(new SetGameMode());
         Objects.requireNonNull(getCommand("msx_sn")).setExecutor(new SendNotice());
-        Objects.requireNonNull(getCommand("msx_ollama")).setExecutor(new OllamaChat());
     }
 
     @Override

@@ -24,7 +24,3 @@ had-wl: "Ce joueur possède déjà une liste blanche, merci de ne pas répéter 
 added-wl: "Le joueur a été ajouté à la liste blanche"
 cel-wl: "La liste blanche du joueur a été supprimée"
 no-wl: "Ce joueur n'est pas dans la liste blanche, veuillez vérifier le nom du joueur"
-no-message: "Veuillez fournir un message à envoyer à Ollama"
-reply: "Répondre à: "
-failure: "La demande a échoué, code d’état: "
-error: "Erreur: "
