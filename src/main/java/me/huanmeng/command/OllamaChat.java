@@ -15,6 +15,7 @@ import java.util.HashMap;
 import java.util.Objects;
 
 import static me.huanmeng.util.Abbreviations.M;
+import static me.huanmeng.MengServerX.getMessage;
 
 public class OllamaChat implements CommandExecutor {
     private JavaPlugin plugin = null;
@@ -27,7 +28,7 @@ public class OllamaChat implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (command.getName().equalsIgnoreCase("msx_ollama")) {
             if (args.length == 0) {
-                sender.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + "请提供要发送给 Ollama 的消息");
+                sender.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + getMessage("no-message"));
                 return true;
             }
 
@@ -62,13 +63,13 @@ public class OllamaChat implements CommandExecutor {
                         HashMap<String, Object> responseJson = gson.fromJson(responseJsonString, HashMap.class);
                         String playerMessage = (String) responseJson.get("response");
 
-                        sender.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + "回应: " + playerMessage);
+                        sender.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + getMessage("reply") + playerMessage);
                     } else {
-                        sender.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + "请求失败，状态码: " + responseCode);
+                        sender.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + getMessage("failure") + responseCode);
                     }
 
                 } catch (Exception e) {
-                    sender.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + "发生错误: " + e.getMessage());
+                    sender.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + getMessage("error") + e.getMessage());
                 }
             }).start();
         }
