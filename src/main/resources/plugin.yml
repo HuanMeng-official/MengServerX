@@ -16,3 +16,5 @@ commands:
     description: set op's game mode
   msx_sn:
     description: send notice
+  msx_ollama:
+    description: chat with ollama
