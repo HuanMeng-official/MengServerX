@@ -1,6 +1,7 @@
 package me.huanmeng.command;
 
 import com.google.gson.Gson;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -14,6 +15,9 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 
+import static me.huanmeng.util.Abbreviations.M;
+import static me.huanmeng.MengServerX.getMessage;
+
 public class OllamaChat implements CommandExecutor {
     private final FileConfiguration config;
 
@@ -25,7 +29,7 @@ public class OllamaChat implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, Command command, @NotNull String label, String[] args) {
         if (command.getName().equalsIgnoreCase("msx_ollama")) {
             if (args.length == 0) {
-                sender.sendMessage("请提供要发送给 Ollama 的消息");
+                sender.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + getMessage("no-message"));
                 return true;
             }
             String message = args[0];
@@ -58,12 +62,12 @@ public class OllamaChat implements CommandExecutor {
                         Gson gson = new Gson();
                         HashMap<String, Object> responseJson = gson.fromJson(responseJsonString, HashMap.class);
                         String playerMessage = (String) responseJson.get("response");
-                        sender.sendMessage("回应: " + playerMessage);
+                        sender.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + getMessage("reply") + playerMessage);
                     } else {
-                        sender.sendMessage("请求失败，状态码: " + responseCode);
+                        sender.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + getMessage("failure") + responseCode);
                     }
                 } catch (Exception e) {
-                    sender.sendMessage("发生错误: " + e.getMessage());
+                    sender.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + getMessage("error") + e.getMessage());
                 }
             }).start();
         }
