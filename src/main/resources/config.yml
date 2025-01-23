@@ -43,6 +43,9 @@ ollama:
   # Ollama model's name
   # Ollama 模型名称
   model: "llama3.1:8b"
+  # Ollama's prompt
+  # Ollama 提示词
+  prompts: "你是一个熟知各种Minecraft知识的玩家"
 # Prevent unwhitelisted players from logging in prompts
 # 阻止无白名单玩家登录提示词
 NotAllow: "&c您并没有白名单，请联系服务器管理员"

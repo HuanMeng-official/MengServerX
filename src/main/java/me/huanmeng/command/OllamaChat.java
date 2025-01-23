@@ -36,6 +36,7 @@ public class OllamaChat implements CommandExecutor {
 
             String ollamaUrl = config.getString("ollama.url");
             String model = config.getString("ollama.model");
+            String promots = config.getString("ollama.prompts");
 
             new Thread(() -> {
                 try {
@@ -44,7 +45,7 @@ public class OllamaChat implements CommandExecutor {
                     connection.setRequestMethod("POST");
                     connection.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
                     connection.setDoOutput(true);
-                    String jsonInputString = "{ \"model\": \"" + model + "\", \"prompt\": \"" + message + "\", \"stream\": false }";
+                    String jsonInputString = "{ \"model\": \"" + model + "\", \"prompt\": \"" + promots + message + "\", \"stream\": false }";
                     byte[] inputBytes = jsonInputString.getBytes(StandardCharsets.UTF_8);
                     connection.getOutputStream().write(inputBytes);
                     connection.getOutputStream().flush();
