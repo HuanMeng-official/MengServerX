@@ -34,6 +34,15 @@ Board: true
 # Scoreboard name
 # 挖掘榜名称
 BoardName: "Board"
+# Ollama's configuration
+# Ollama 配置
+ollama:
+  # Ollama's address
+  # Ollama URL地址
+  url: "http://localhost:11434/api/generate"
+  # Ollama model's name
+  # Ollama 模型名称
+  model: "llama3.1:8b"
 # Prevent unwhitelisted players from logging in prompts
 # 阻止无白名单玩家登录提示词
 NotAllow: "&c您并没有白名单，请联系服务器管理员"
