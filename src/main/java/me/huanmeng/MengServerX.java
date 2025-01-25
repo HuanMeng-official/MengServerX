@@ -1,6 +1,7 @@
 package me.huanmeng;
 
 import me.huanmeng.command.*;
+import me.huanmeng.command.tp.*;
 import me.huanmeng.event.JoinGame;
 import me.huanmeng.player.ChatFormat;
 import me.huanmeng.player.JoinTips;
@@ -50,6 +51,9 @@ public final class MengServerX extends JavaPlugin {
         Objects.requireNonNull(getCommand("msx_gm")).setExecutor(new SetGameMode());
         Objects.requireNonNull(getCommand("msx_sn")).setExecutor(new SendNotice());
         Objects.requireNonNull(getCommand("msx_ollama")).setExecutor(new OllamaChat(getConfig()));
+        Objects.requireNonNull(getCommand("msx_tp")).setExecutor(new Teleport());
+        Objects.requireNonNull(getCommand("msx_accept")).setExecutor(new TeleportAccept());
+        Objects.requireNonNull(getCommand("msx_deny")).setExecutor(new TeleportDeny());
     }
 
     @Override

@@ -18,3 +18,9 @@ commands:
     description: send notice
   msx_ollama:
     description: chat with ollama
+  msx_tp:
+    description: teleport to player
+  msx_accept:
+    description: accept to teleport
+  msx_deny:
+    description: deny to teleport
