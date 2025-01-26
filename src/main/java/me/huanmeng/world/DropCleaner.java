@@ -3,6 +3,7 @@ package me.huanmeng.world;
 import me.huanmeng.MengServerX;
 import me.huanmeng.util.TextColor;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Item;
 import org.bukkit.plugin.Plugin;
@@ -36,5 +37,9 @@ public class DropCleaner {
             }
         }
         Bukkit.getLogger().info(TextColor.YELLOW + M + TextColor.RESET + getMessage("cleaner-info_1") + itemCount + getMessage("cleaner-info_2"));
+
+        for (org.bukkit.entity.Player player : Bukkit.getOnlinePlayers()) {
+            player.sendMessage(ChatColor.YELLOW + M + ChatColor.RESET + getMessage("cleaner-info_1") + itemCount + getMessage("cleaner-info_2"));
+        }
     }
 }
