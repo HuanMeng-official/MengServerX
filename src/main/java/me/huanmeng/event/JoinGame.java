@@ -15,10 +15,10 @@ public class JoinGame implements Listener {
     @EventHandler
     public void PlayerOnLogin(PlayerLoginEvent event){
         config.reloadConfig();
-        if(config.getConfig().getBoolean("WhiteList")){
+        if (config.getConfig().getBoolean("WhiteList")) {
             String loginPlayer = event.getPlayer().getName();
             List<String> wedPlayer = config.getConfig().getStringList("List");
-            if(!wedPlayer.contains(loginPlayer)){
+            if (!wedPlayer.contains(loginPlayer)) {
                 event.setResult(PlayerLoginEvent.Result.KICK_WHITELIST);
                 event.disallow(event.getResult(), ChatColor.translateAlternateColorCodes
                         ('&', Objects.requireNonNull(
