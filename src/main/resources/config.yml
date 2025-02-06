@@ -22,9 +22,9 @@ KeepInventory: false
 # Whether to stop Creeper from exploding and destroying terrain
 # 是否阻止苦力怕爆炸摧毁地形
 AntiCreeperBoom: false
-# Whether to disable farmland trampling
+# Whether to disable farmland trample
 # 是否禁用耕地践踏
-AntiTrampling: false
+AntiTrample: false
 # Whether to turn on Drop Cleanup
 # 是否开启掉落物清理
 DropCleaner: true

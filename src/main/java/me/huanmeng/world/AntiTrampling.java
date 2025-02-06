@@ -11,10 +11,8 @@ public class AntiTrampling implements Listener {
     @EventHandler
     public void onFarmlandTrample(PlayerInteractEvent event) {
         Plugin config = MengServerX.getPlugin(MengServerX.class);
-        if (config.getConfig().getBoolean("AntiTrampling")) {
-            if (event.getAction() == Action.PHYSICAL && event.getClickedBlock() != null && event.getClickedBlock().getType().toString().equals("FARMLAND")) {
-                event.setCancelled(true);
-            }
+        if (event.getAction() == Action.PHYSICAL && event.getClickedBlock() != null && event.getClickedBlock().getType().toString().equals("FARMLAND")) {
+            event.setCancelled(config.getConfig().getBoolean("AntiTrample"));
         }
     }
 }
