@@ -1,18 +1,45 @@
-## MengServerX
-### 支持语言/开源协议：
-[![CN](https://img.shields.io/badge/简体中文-Click-blue)](./README.md)  ![MIT](https://img.shields.io/badge/License-MIT-green) ![Java](https://img.shields.io/badge/Java-100%25-orange)
+![MSX](./readme/icon/msx.png)
+## 📋MengServerX
 
-### 什么是MengServerX？
-MengServerX是 [MengPluginX](https://github.com/HuanMeng-official/MengPluginX) 的续作，相较于MPX，MSX拥有更好的性能，更简洁的代码。
+[![EN](https://img.shields.io/badge/English-Click-blue)](./README.md)
+[![CN](https://img.shields.io/badge/简体中文-Click-red)](./readme/README_zh.md)
+[![FR](https://img.shields.io/badge/Français-Click-yellow)](./readme/README_fr.md)
+[![ES](https://img.shields.io/badge/Español-Click-brown)](./readme/README_es.md)
+![MIT](https://img.shields.io/badge/License-MIT-green)
+![Java](https://img.shields.io/badge/Language-Java-orange)
 
-### 相比MengPluginX的修改？
-更简洁的代码，去除大量无用功能，更易懂的配置文件。
+### 🌏Support Languages:
+![EN](https://img.shields.io/badge/English-100%25-blue)
+![CN](https://img.shields.io/badge/简体中文-100%25-blue)
+![EN](https://img.shields.io/badge/Français-100%25-blue)
+![EN](https://img.shields.io/badge/Español-100%25-blue)
 
-### 如何使用MSX？
-在 [Release](https://github.com/HuanMeng-official/MengServerX/releases) 页下载 ***jar*** 并拖入服务器的 plugins 文件夹。
+### 🔍Support Features:
+- [x] Multi-language support
+- [x] Modify the chat format
+- [x] Player name whitelist
+- [x] Keep Inventory
+- [x] Terrain protection
+- [x] Clean drop items
+- [x] Digging scoreboard
+- [x] Chat with ollama
+- [x] Player-to-player teleportation
+- [x] Announcement of the whole server
+- [x] Command helper
 
-### 如何提交建议？
-在 [Issue](https://github.com/HuanMeng-official/MengServerX/issues) 页下发送。
+### 🧩Design Concept:
+This plugin adopts a modular design concept, and the various functions are not closely related to each other, which is convenient for later maintenance and update.
 
-### 如何构建MSX？
-下载源码，使用 ***Maven*** 构建。
+### 📌Special Notes:
+This plugin enables the ***whitelist*** by default, if you need to turn it off, please modify the ***config.yml***, thank you for your understanding.
+
+### 🔨How To Build:
+- Use the `git clone https://github.com/HuanMeng-official/MengServerX.git` clone source code
+- Importing this project into the IDE (IDEA is recommended)
+- Use Maven to build the source code
+- Obtain the jar from the target directory
+
+### 💡Contributors:
+|HuanMeng|Aurora|WanNing|
+|:------:|:----:|:-----:|
+|https://github.com/HuanMeng-official|https://github.com/Aurora-official|https://github.com/WanNing-official|
