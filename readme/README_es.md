@@ -22,7 +22,7 @@
 - [x] Protección del terreno
 - [x] Limpiar objetos tirados
 - [x] Tabla de puntuación de excavación
-- [x] Chat con ollama
+- [x] Chat con AI
 - [x] Teletransporte entre jugadores
 - [x] Anuncios globales del servidor
 - [x] Ayudante de comandos

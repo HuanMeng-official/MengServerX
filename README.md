@@ -22,7 +22,7 @@
 - [x] Terrain protection
 - [x] Clean drop items
 - [x] Digging scoreboard
-- [x] Chat with ollama
+- [x] Chat with AI
 - [x] Player-to-player teleportation
 - [x] Announcement of the whole server
 - [x] Command helper
