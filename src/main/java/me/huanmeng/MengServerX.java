@@ -52,7 +52,6 @@ public final class MengServerX extends JavaPlugin {
         Objects.requireNonNull(getCommand("msx_accept")).setExecutor(new TeleportAccept());
         Objects.requireNonNull(getCommand("msx_deny")).setExecutor(new TeleportDeny());
         Objects.requireNonNull(getCommand("msx_ai")).setExecutor(new OpenAIChat(getConfig()));
-        Objects.requireNonNull(getCommand("msx_ai_reset")).setExecutor(new OpenAIChat(getConfig()));
     }
 
     @Override

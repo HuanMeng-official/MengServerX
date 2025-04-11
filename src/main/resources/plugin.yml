@@ -24,5 +24,3 @@ commands:
     description: deny to teleport
   msx_ai:
     description: chat with ai
-  msx_ai_reset:
-    description: clean history
