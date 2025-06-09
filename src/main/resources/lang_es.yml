@@ -17,7 +17,6 @@ command-help_tpd_util: "/msx_deny - Rechazar la solicitud de teletransportación
 command-help_other: "----OTRAS FUNCIONES----"
 command-help_help_other: "/msx_help - Ayuda con los comandos"
 command-help_ai_other: "/msx_ai <mensaje> - Hablar con AI"
-command-help_reset_other: "/msx_ai_reset - Restablecer el historial de conversación"
 seed-info: "Semilla:"
 notice-info: "Anuncio:"
 gm-info_cre: "Se ha cambiado tu modo de juego a CREACIÓN"

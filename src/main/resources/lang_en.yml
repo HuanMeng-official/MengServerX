@@ -17,7 +17,6 @@ command-help_tpd_util: "/msx_deny - Refuse the teleport request from another pla
 command-help_other: "----Other----"
 command-help_help_other: "/msx_help - Command help"
 command-help_ai_other: "/msx_ai <message> - Chat with AI"
-command-help_reset_other: "/msx_ai_reset - Reset conversation history"
 seed-info: "Seed: "
 notice-info: "Notice: "
 gm-info_cre: "Changed your game mode to CREATIVE"

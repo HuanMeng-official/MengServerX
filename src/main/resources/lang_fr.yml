@@ -17,7 +17,6 @@ command-help_tpd_util: "/msx_deny - Refuser la demande de téléportation d'un a
 command-help_other: "----Autres fonctionnalités----"
 command-help_help_other: "/msx_help - Aide sur les commandes"
 command-help_ai_other: "/msx_ai <message> - Parler à AI"
-command-help_reset_other: "/msx_ai_reset - Réinitialiser l'historique de conversation"
 seed-info: "Seed : "
 notice-info: "Annonce : "
 gm-info_cre: "Le mode de jeu a été changé en Création"
