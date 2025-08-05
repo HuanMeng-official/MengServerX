@@ -11,8 +11,8 @@
 ### 🌏Langues prises en charge:
 ![EN](https://img.shields.io/badge/English-100%25-blue)
 ![CN](https://img.shields.io/badge/简体中文-100%25-blue)
-![EN](https://img.shields.io/badge/Français-100%25-blue)
-![EN](https://img.shields.io/badge/Español-100%25-blue)
+![FR](https://img.shields.io/badge/Français-100%25-blue)
+![ES](https://img.shields.io/badge/Español-100%25-blue)
 
 ### 🔍Fonctionnalités prises en charge :
 - [x] Prise en charge multilingue
